@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Find out how much fluff you're writing and how you can fix it using AI!",
   openGraph: {
-    images: "https://www.fluff-detector.vercel.app/og.png",
+    images: "https://fluff-detector.vercel.app/og.png",
   },
 };
 
