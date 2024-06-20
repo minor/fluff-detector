@@ -52,11 +52,12 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50 text-gray-900 antialiased">
       <div className="relative">
         <div
-          className="pointer-events-none absolute left-1/2 top-0 z-10 h-[400px] w-[1000px] -translate-x-1/2 -translate-y-1/2 opacity-[0.15]"
+          className="pointer-events-none absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2 opacity-[0.15]"
           style={{
             backgroundImage: "radial-gradient(#A4A4A3, transparent 50%)",
           }}
         ></div>
+
         <svg
           className="pointer-events-none absolute inset-0 h-full w-full stroke-gray-400/80 opacity-50 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]"
           aria-hidden="true"
