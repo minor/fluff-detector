@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Fluff Detector",
   description:
     "Find out how much fluff you're writing and how you can fix it using LLMs!",
+  openGraph: {
+    images: "https://www.fluff-detector.vercel.app/og.png",
+  },
 };
 
 export default function RootLayout({
