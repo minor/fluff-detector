@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fluff Detector",
+  title: "AI-Powered Fluff Detector",
   description:
-    "Find out how much fluff you're writing and how you can fix it using LLMs!",
+    "Find out how much fluff you're writing and how you can fix it using AI!",
   openGraph: {
     images: "https://www.fluff-detector.vercel.app/og.png",
   },
