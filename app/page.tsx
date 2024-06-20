@@ -39,9 +39,7 @@ export default function Home() {
       });
 
       const data = await response.json();
-      console.log(data.score);
-      console.log(data.suggestions);
-      setfluffLevel(data.score); // Changed from data.fluffLevel to data.score
+      setfluffLevel(data.score);
       setSuggestions(data.suggestions);
     } catch (error) {
       console.error("Error analyzing text:", error);
@@ -72,7 +70,7 @@ export default function Home() {
               y="-1"
               patternUnits="userSpaceOnUse"
             >
-              <path d="M100 200V.5M.5 .5H200" fill="none"></path>
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
             </pattern>
           </defs>
           <svg x="50%" y="-1" className="overflow-visible fill-gray-50">
@@ -134,24 +132,54 @@ export default function Home() {
             {fluffLevel !== null && (
               <div className="mt-8 border-t border-[#D8DADF] justify-center">
                 <h1 className="mt-8 text-2xl font-medium text-gray-800">
-                  Fluff Level: {fluffLevel}%
+                  Fluff Level:{" "}
+                  <span className="bg-gradient-to-r from-rose-400 to-orange-300 bg-clip-text text-transparent">
+                    {fluffLevel}%
+                  </span>
                 </h1>
                 <p className="mt-4 text-lg text-gray-600">
                   Find out ways to improve your writing below:
                 </p>
-                <ul>
+                <ol className="mt-4 gap-y-2 grid text-left">
                   {suggestions.map((item, index) => (
-                    <li
-                      key={index}
-                    >{`"${item.fluff}" --> "${item.suggestion}"`}</li>
+                    <li key={index} value={index + 1} className="">
+                      {`${index + 1}. "${item.fluff}"`}{" "}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        className="w-4 h-4 fill-rose-500/80 inline"
+                        fill="currentColor"
+                      >
+                        <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+                      </svg>{" "}
+                      {`"${item.suggestion}"`}
+                    </li>
                   ))}
-                </ul>
+                </ol>
+                {/* <ul className="mt-4 gap-y-2 grid text-left">
+                  {suggestions.map((item, index) => (
+                    <li key={index} className="">
+                      {`"${item.fluff}"`}{" "}
+                      <span className="text-rose-400/60">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          className="w-4 h-4 fill-rose-400/90 inline"
+                          fill="currentColor"
+                        >
+                          <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+                        </svg>
+                      </span>{" "}
+                      {`"${item.suggestion}"`}
+                    </li>
+                  ))}
+                </ul> */}
               </div>
             )}
           </div>
         </div>
       </div>
-      <footer className="flex justify-center mt-20">
+      <footer className="flex justify-center pt-20 pb-10 bg-gray-50">
         <h3 className="text-gray-600 font-light text-base cursor-default">
           hacked together with <span className="hover:text-rose-400">♡</span> by{" "}
           <a
