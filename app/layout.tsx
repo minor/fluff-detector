@@ -20,13 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          src="https://beamanalytics.b-cdn.net/beam.min.js"
-          data-token="6728c254-9049-4c5d-9663-79665b7906f3"
-          async
-        ></script>
-      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
