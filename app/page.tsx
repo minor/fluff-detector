@@ -93,12 +93,12 @@ export default function Home() {
               <span className="bg-gradient-to-r from-rose-400 to-orange-300 bg-clip-text text-transparent">
                 bullshit
               </span>{" "}
-              you're writing
+              you&apos;re writing
             </h1>
 
             <p className="mx-auto max-w-xl text-center text-xl text-gray-600">
               Stop writing fluff. Use this GPT-4o-powered calculator to figure
-              out how much BS you're writing and how you can fix it.
+              out how much BS you&apos;re writing and how you can fix it.
             </p>
             <div className="mt-8">
               <textarea
