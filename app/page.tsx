@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Head from "next/head";
+import Script from "next/script";
 
 interface Suggestion {
   fluff: string;
@@ -51,13 +51,11 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <script
-          src="https://beamanalytics.b-cdn.net/beam.min.js"
-          data-token="6728c254-9049-4c5d-9663-79665b7906f3"
-          async
-        ></script>
-      </Head>
+      <Script
+        src="https://beamanalytics.b-cdn.net/beam.min.js"
+        data-token="6728c254-9049-4c5d-9663-79665b7906f3"
+        async
+      />
       <main className="min-h-screen bg-gray-50 text-gray-900 antialiased">
         <div className="relative">
           <div
